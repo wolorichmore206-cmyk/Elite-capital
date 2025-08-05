@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elite Capital Bank - Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: #1a237e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .dashboard {
+            padding: 30px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .balance {
+            font-size: 32px;
+            color: #2e7d32;
+        }
+        .transactions {
+            margin-top: 20px;
+        }
+        .transaction {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .send-form input {
+            padding: 10px;
+            margin-right: 10px;
+        }
+        .send-form button {
+            padding: 10px 20px;
+            background: #1a237e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .send-form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Elite Capital Bank</h1>
+        <p>Welcome, Jonathan Mendez</p>
+    </div>
+    <div class="dashboard">
+        <div class="card">
+            <h2>Current Balance</h2>
+            <p class="balance">$98,203.45</p>
+        </div>
+        <div class="card transactions">
+            <h2>Recent Transactions</h2>
+            <div class="transaction">
+                <span>Deposit - PayPal</span>
+                <span>+$2,000.00</span>
+            </div>
+            <div class="transaction">
+                <span>Transfer to Chris Banks</span>
+                <span>-$3,500.00</span>
+            </div>
+            <div class="transaction">
+                <span>Amazon Purchase</span>
+                <span>-$123.90</span>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Send Money</h2>
+            <form class="send-form" onsubmit="event.preventDefault(); alert('Transfer Complete!');">
+                <input type="text" placeholder="Recipient Name" required>
+                <input type="number" placeholder="Amount $" required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
